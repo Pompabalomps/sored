@@ -12,5 +12,11 @@ start:
     int 86h
     std
     int 86h
+    mov cx, 0cccch
+    mov bx, 0
+shoot:
+    mov [bx], cx
+    add bx, 2
+    jmp shoot
 exit:
 END start
